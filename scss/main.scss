@@ -1,0 +1,54 @@
+/* Default */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+}
+
+/* Container like bootstrap */
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+}
+
+#questions .answer {
+  h6 {
+    border-bottom: 1px solid;
+  }
+  p::before {
+    content: "\25CF";
+  }
+  p {
+    // text-align: justify;
+    padding: 0 10px 0 10px;
+    margin: 0;
+  }
+  p:last-child {
+    margin: 0 0 20px 0;
+  }
+  li {
+    padding-left: 10px;
+  }
+}

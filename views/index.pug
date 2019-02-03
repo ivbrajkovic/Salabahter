@@ -1,0 +1,41 @@
+extends layout
+
+block content
+
+  //-h2= db_data.length
+
+  //- Only if reveived data
+  if db_data
+    .w3-row-padding
+      each val in db_data
+        .w3-third
+          .answer          
+            h6= val.id + " " + val.pitanje
+            each odgovor in val.odgovori
+              p= " " + odgovor
+
+    //-
+      - if (i == 0)
+        .w3-row-padding
+          .w3-third
+            .answer          
+              h6= val.id + " " + val.pitanje
+              each odgovor in val.odgovori
+                p= " " + odgovor
+        - i++
+        h2= i
+
+      - elese
+        .w3-third
+          .answer          
+            h6= val.id + " " + val.pitanje
+            each odgovor in val.odgovori
+              p= " " + odgovor
+        - i++
+        - if(i == 3) i = 0
+        h2= i
+
+  else
+    h3 Neispravan prikaz podataka, 
+      br 
+      | podaci nisu dohvačeni iz baze podataka.
