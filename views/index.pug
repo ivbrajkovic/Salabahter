@@ -11,7 +11,8 @@ block content
         if db_data
           .w3-row-padding
             each val in db_data
-              .w3-third
+              //- .w3-third
+              w3-half
                 .answer          
                   h6= val.id + ". " + val.pitanje
                   each odgovor in val.odgovori
