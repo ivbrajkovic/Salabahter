@@ -4,38 +4,48 @@ html(lang='en')
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(http-equiv='X-UA-Compatible', content='ie=edge')
+
     title Slabahter :)
+
     // 3w.css
     link(rel='stylesheet', href='https://www.w3schools.com/w3css/4/w3.css')
     link(rel='stylesheet', href='https://www.w3schools.com/lib/w3-colors-win8.css')
+
     // Fonts
     link(href='https://fonts.googleapis.com/css?family=Roboto', rel='stylesheet')
+
     // Custom css
     link(rel='stylesheet', href='stylesheets/main.css')
     // <link rel="stylesheet" href="stylesheets/utility.css" />
     // <link rel="stylesheet" href="stylesheets/topbar.css" />
-  body
+
+  body    
     // Top navigation bar
     nav.w3-top
       .w3-bar.w3-win8-steel.w3-large
         .container
-          a.w3-bar-item.w3-button.w3-win8-teal.w3-hover-black(href='#') Home
+          a.w3-bar-item.w3-button.w3-win8-teal.w3-hover-black(href='/') Home
           a.w3-bar-item.w3-button.w3-hide-small.w3-hover-black(href='#') Link 1
           a.w3-bar-item.w3-button.w3-hide-small.w3-hover-black(href='#') Link 2
-          a.w3-bar-item.w3-button.w3-hide-small.w3-hover-black(href='#') Link 3
+          a.w3-bar-item.w3-button.w3-hide-small.w3-hover-black(href='/admin') Admin
           a.toggler.w3-bar-item.w3-button.w3-right.w3-hide-large.w3-hide-medium.w3-hover-black(href='#')
             | ☰
           .collapsable.w3-bar-block.w3-win8-steel.w3-hide.w3-hide-large.w3-hide-medium
             a.w3-bar-item.w3-button.w3-hover-black(href='#') Link 1
             a.w3-bar-item.w3-button.w3-hover-black(href='#') Link 2
-            a.w3-bar-item.w3-button.w3-hover-black(href='#') Link 3
+            a.w3-bar-item.w3-button.w3-hover-black(href='/admin') Admin
     br
     br
 
     .container.w3-center.w3-hide
       .w3-card
         h6 hahahahahah
-    .container.w3-center.w3-section
+
+    .container.w3-section
+    
+      block content
+
+    //-
       .w3-card.w3-padding-16
         input#input-filter.w3-margin-top(placeholder='Search for ...')
         .w3-panel
@@ -228,4 +238,6 @@ html(lang='en')
                   | netočno
 
     // Custom scripts
-    script(src='javascripts/main.js')
+    script
+      include ../public/javascripts/main.js
+    

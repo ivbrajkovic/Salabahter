@@ -1,0 +1,39 @@
+extends layout
+
+block content
+
+  if db_data
+    #alert.w3-container.w3-orange
+      h4 Podatak pohranjen pod id = #{db_data}
+   
+  .w3-container.w3-teal 
+    h4.w3-show-inline-block Unos podataka
+    a.w3-right.logout(href="/logout") X
+
+  form(method="post", action="/admin").w3-container.w3-card-4.w3-padding-large
+    .w3-section
+      label.w3-text-grey Pitanje
+      input.w3-input.w3-border(type='text', name="pitanje", required='')
+
+    .w3-section
+      label.w3-text-grey Odgovori
+      //-textarea.w3-input.w3-border(style='resize:none')
+      textarea.w3-input.w3-border(style="resize: vertical;", name="odgovori", required='')
+    
+    .w3-section.w3-right
+      button.w3-btn.w3-padding.w3-teal(type='submit', style='width:120px') Unos   ❯
+
+  if db_data
+    script
+      include ../public/javascripts/admin.js
+    
+  //
+    .w3-card.w3-padding-16
+      h2 Admin page
+
+      .w3-panel
+        form#contact-form.rounded-0.shadow-2(method='post')
+
+
+          input#input-filter.w3-margin-top(placeholder='Search for ...')
+

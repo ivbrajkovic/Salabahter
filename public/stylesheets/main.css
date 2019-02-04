@@ -40,3 +40,7 @@ body {
 
 #questions .answer li {
   padding-left: 10px; }
+
+.logout {
+  margin: 14px 0;
+  text-decoration: none; }

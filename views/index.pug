@@ -1,41 +1,46 @@
 extends layout
 
 block content
+  .w3-card.w3-padding-16.w3-center
+    input#input-filter.w3-margin-top(placeholder='Search for ...')
+    .w3-panel
+      #questions.w3-left-align.w3-text-dark-grey
 
-  //-h2= db_data.length
+        //- h2= db_data.length
+        //- Only if reveived data
+        if db_data
+          .w3-row-padding
+            each val in db_data
+              .w3-third
+                .answer          
+                  h6= val.id + " " + val.pitanje
+                  each odgovor in val.odgovori
+                    p= " " + odgovor
+          //-
+            - if (i == 0)
+              .w3-row-padding
+                .w3-third
+                  .answer          
+                    h6= val.id + " " + val.pitanje
+                    each odgovor in val.odgovori
+                      p= " " + odgovor
+              - i++
+              h2= i
 
-  //- Only if reveived data
-  if db_data
-    .w3-row-padding
-      each val in db_data
-        .w3-third
-          .answer          
-            h6= val.id + " " + val.pitanje
-            each odgovor in val.odgovori
-              p= " " + odgovor
-
-    //-
-      - if (i == 0)
-        .w3-row-padding
-          .w3-third
-            .answer          
-              h6= val.id + " " + val.pitanje
-              each odgovor in val.odgovori
-                p= " " + odgovor
-        - i++
-        h2= i
-
-      - elese
-        .w3-third
-          .answer          
-            h6= val.id + " " + val.pitanje
-            each odgovor in val.odgovori
-              p= " " + odgovor
-        - i++
-        - if(i == 3) i = 0
-        h2= i
-
-  else
-    h3 Neispravan prikaz podataka, 
-      br 
-      | podaci nisu dohvačeni iz baze podataka.
+            - elese
+              .w3-third
+                .answer          
+                  h6= val.id + " " + val.pitanje
+                  each odgovor in val.odgovori
+                    p= " " + odgovor
+              - i++
+              - if(i == 3) i = 0
+              h2= i
+        else
+          h3 Neispravan prikaz podataka, 
+            br 
+            | podaci nisu dohvačeni iz baze podataka.
+  
+  script
+    include ../public/javascripts/index.js
+  
