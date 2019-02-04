@@ -28,8 +28,9 @@ html(lang='en')
           a.w3-bar-item.w3-button.w3-hide-small.w3-hover-black(href='/admin') Admin
           a.toggler.w3-bar-item.w3-button.w3-right.w3-hide-large.w3-hide-medium.w3-hover-black(href='#')
             | ☰
-          .collapsable.w3-bar-block.w3-win8-steel.w3-hide.w3-hide-large.w3-hide-medium
-            a.w3-bar-item.w3-button.w3-hover-black(href='/admin') Admin
+          //- collapsable.w3-bar-block.w3-win8-steel.w3-hide.w3-hide-large.w3-hide-medium
+          .collapsable.w3-bar.w3-win8-steel.w3-hide.w3-hide-large.w3-hide-medium
+            a.w3-button.w3-bar.w3-left-align.w3-section-small.w3-hover-black(href='/admin') Admin
     br
     br
 
@@ -38,7 +39,7 @@ html(lang='en')
         h6 hahahahahah
 
     .container.w3-section
-    
+
       block content
 
     //-
@@ -50,190 +51,190 @@ html(lang='en')
             block content
 
           //-
-            // First column
-            .w3-half
-              .answer
-                h6 Što je Operacijski sustav?
-                p
-                  | skup programa koji omogućavaju izvođenje radnih zahvata na računalu
-                p
-                  | potpora korisniku i aplikativnim programima
-                p
-                  | jednostavno korištenje računala
-                p
-                  | efikasno korištenje računala
-                p
-                  | slojeviti pristup
-              .answer
-                h6 Koji su osnovni zadaci operativnog sustava?
-                p
-                  | omogućava djelotvorno iskorištavanje svih dijelova računala
-                p
-                  | omogućava višeprogramski rad
-                p
-                  | skriva od korisika detalje izvo enja neke operacije
-              .answer
-                h6 Što je proces?
-                p
-                  | proces je sve ono što je potrebno da bi se program mogao izvoditi
-              .answer
-                h6 Što je dretva?
-                p
-                  | dretva je niz instrukcija u izvođenju
-                p
-                  | dretve, zajedno s procesima, služe za izvođenje višezadaćnog i višekorisničkog
-                  | načina rada. Osnovna razlika između dretvi i procesa je ta da procesi, međusobno,
-                  | nemaju ništa zajedničko, dok dretve koriste zajedničke resurse. Svaki proces
-                  | sastoji se od minimalno jedne dretve
-              .answer
-                h6 Kako je omogućen višeprogramski rad?
-                p
-                  | procesi i dretve omogućuju višeprogramski rad
-              .answer
-                h6 Procesor sa više registara, ali manjom skupinom instrukcija nazivamo?
-                p
-                  | RISC
-              .answer
-                h6 Procesor sa manje registara, ali većom skupinom instrukcija nazivamo?
-                p
-                  | CISC
-              .answer
-                h6 Iz aktivnog stanja dretva može biti izbačena?
-                p
-                  | prekidon
-                p
-                  | pozivom jezgrene fukcije
-              .answer
-                h6 Dretva čije istrukcije procesor upravo izvodi?
-                p
-                  | aktivna
-              .answer
-                h6 Dretva koja čeka na dodjelu procesora?
-                p
-                  | pasivna
-              .answer
-                h6 Blokirana dretva može samu sebe izbaviti iz blokiranog stanja?
-                p
-                  | netočno
-              .answer
-                h6 Koja su blokirana stanja dretvi?
-                p
-                  | čekanje na U/I
-                p
-                  | binarni semafor
-                p
-                  | opći semafor
-                p
-                  | odgođene
-              .answer
-                h6
-                  | Za svaku se dretvu u jezgri pohranjuju svi važni podaci u zapis koji se zove?
-                p
-                  | opisnik dretve
-              .answer
-                h6
-                  | Navesti uvjete koje mora zadovoljiti algoritam međusobnog isključivanja dretvi.
-                p
-                  | samo jedna dretva u nekom trenutku može biti u K.O.
-                p
-                  | algoritam mora djelovati i onda kada su brzine izvođenja dretvi različite
-                p
-                  | ako neka dretva zastane u N.K.O. to ne smije spriječiti drugu dretvu da uđe u K.O.
-                p
-                  | izbor koja dretva treba ući u K.O. mora se obaviti u konačnom vremenu
-              .answer
-                h6 Što je kontekst?
-                p
-                  | kontekst je sadržaj svih registara u procesoru, osim programskog brojila.
-                  | Pohraniti kontekst znači pohraniti trenutni sadržaj registara u procesoru, kako bi
-                  | nakon izvođenja prekida/potprograma procesor mogao dalje nastaviti izvoditi glavni
-                  | program (ili program više razine)
-              .answer
-                h6 Trajanje postavljanja glave magnetskog diska sastoji se od
-                p
-                  | trajanja traženja staze
-                p
-                  | rotacijsko kašnjenje
-              .answer
-                h6 Od cega se sastoji jezgra operacijskog sustava?
-                p
-                  | strukture podataka jezgre
-                p
-                  | jezgrenih funkcija
-              .answer
-                h6
-                  | Pronađi prave RAID sustave!
-                p
-                  | paritetna organizacija krupne zrnatosti sa raspodjeljenjim paritetnim pojasevima - RAID 5
-                p
-                  | organizacija sa zaštitom od dvostrukog kvara - RAID 6
-                p
-                  | pojasna organizacija, nema redundancije - RAID 0
-                p
-                  | svaki disk ima svoju kopiju - RAID 1
-                p
-                  | paritetna organizacija sitne zrnatosti, odvojeni paritetni disk - RAID 3
-              .answer
-                h6 Što je logički, a što fizički adresni prostor?
-                p
-                  | logički adresni prostor je posjeljen na stanice
-                p
-                  | fizički adresni prostor je spremnik podjeljen na okvire u koje, možemo smjestiti
-                  | jednu stranicu
-            // Second column
-            // <div class="w3-third">
-            // </div>
-            // Thirs column
-            .w3-half
-              .answer
-                h6
-                  | Mogu li stranice logičkog adresnog prostora biti smještene u okvire fizičkog
-                  | adresnog prostora proizvoljnim redoslijedom?
-                p
-                  | točno
-              .answer
-                h6 Prekidi
-                p
-                  | sklopovski prekid
-                p
-                  | programski prekid
-                p
-                  | prekidi sata
-              .answer
-                h6 Prekid izazvan od U/I jedinice je?
-                p
-                  | sklopovski prekid
-              .answer
-                h6 Prekid izazvan posebnom instrukcijom nazivamo?
-                p
-                  | programski prekid
-              .answer
-                h6 Prekid izazvan posebnom instrukcijom nazivamo?
-                p
-                  | programski prekid
-              .answer
-                h6 Prekidi izavani promašajem stranice jednaki su svim ostalim prekidima?
-                p
-                  | netočno
-              .answer
-                h6
-                  | U čemu se razlikuju prekidi izazvani zbog promašaja stranice kod straničenja na
-                  | zahtjev od ostalih vrsta prekida?
-                p
-                  | Prekid zbog adresiranja nepostojeće stranice se dogodi usred instrukcije. Nakon
-                  | obrade prekida mora se ponoviti instrukcija unutar koje se dogodio prekid. Kod
-                  | ostalih vrsta prekida, postojanje prekida se provjerava nakon izvođenja
-                  | instrukcije, a ponovno pokretanje dretve započinje sljedećom instrukcijom
-              .answer
-                h6 Prekidi izavani promašajem stranice jednaki su svim ostalim prekidima?
-                p
-                  | netočno
-              .answer
-                h6 Prekidi izavani promašajem stranice jednaki su svim ostalim prekidima?
-                p
-                  | netočno
+          // First column
+          .w3-half
+            .answer
+              h6 Što je Operacijski sustav?
+              p
+                | skup programa koji omogućavaju izvođenje radnih zahvata na računalu
+              p
+                | potpora korisniku i aplikativnim programima
+              p
+                | jednostavno korištenje računala
+              p
+                | efikasno korištenje računala
+              p
+                | slojeviti pristup
+            .answer
+              h6 Koji su osnovni zadaci operativnog sustava?
+              p
+                | omogućava djelotvorno iskorištavanje svih dijelova računala
+              p
+                | omogućava višeprogramski rad
+              p
+                | skriva od korisika detalje izvo enja neke operacije
+            .answer
+              h6 Što je proces?
+              p
+                | proces je sve ono što je potrebno da bi se program mogao izvoditi
+            .answer
+              h6 Što je dretva?
+              p
+                | dretva je niz instrukcija u izvođenju
+              p
+                | dretve, zajedno s procesima, služe za izvođenje višezadaćnog i višekorisničkog
+                | načina rada. Osnovna razlika između dretvi i procesa je ta da procesi, međusobno,
+                | nemaju ništa zajedničko, dok dretve koriste zajedničke resurse. Svaki proces
+                | sastoji se od minimalno jedne dretve
+            .answer
+              h6 Kako je omogućen višeprogramski rad?
+              p
+                | procesi i dretve omogućuju višeprogramski rad
+            .answer
+              h6 Procesor sa više registara, ali manjom skupinom instrukcija nazivamo?
+              p
+                | RISC
+            .answer
+              h6 Procesor sa manje registara, ali većom skupinom instrukcija nazivamo?
+              p
+                | CISC
+            .answer
+              h6 Iz aktivnog stanja dretva može biti izbačena?
+              p
+                | prekidon
+              p
+                | pozivom jezgrene fukcije
+            .answer
+              h6 Dretva čije istrukcije procesor upravo izvodi?
+              p
+                | aktivna
+            .answer
+              h6 Dretva koja čeka na dodjelu procesora?
+              p
+                | pasivna
+            .answer
+              h6 Blokirana dretva može samu sebe izbaviti iz blokiranog stanja?
+              p
+                | netočno
+            .answer
+              h6 Koja su blokirana stanja dretvi?
+              p
+                | čekanje na U/I
+              p
+                | binarni semafor
+              p
+                | opći semafor
+              p
+                | odgođene
+            .answer
+              h6
+                | Za svaku se dretvu u jezgri pohranjuju svi važni podaci u zapis koji se zove?
+              p
+                | opisnik dretve
+            .answer
+              h6
+                | Navesti uvjete koje mora zadovoljiti algoritam međusobnog isključivanja dretvi.
+              p
+                | samo jedna dretva u nekom trenutku može biti u K.O.
+              p
+                | algoritam mora djelovati i onda kada su brzine izvođenja dretvi različite
+              p
+                | ako neka dretva zastane u N.K.O. to ne smije spriječiti drugu dretvu da uđe u K.O.
+              p
+                | izbor koja dretva treba ući u K.O. mora se obaviti u konačnom vremenu
+            .answer
+              h6 Što je kontekst?
+              p
+                | kontekst je sadržaj svih registara u procesoru, osim programskog brojila.
+                | Pohraniti kontekst znači pohraniti trenutni sadržaj registara u procesoru, kako bi
+                | nakon izvođenja prekida/potprograma procesor mogao dalje nastaviti izvoditi glavni
+                | program (ili program više razine)
+            .answer
+              h6 Trajanje postavljanja glave magnetskog diska sastoji se od
+              p
+                | trajanja traženja staze
+              p
+                | rotacijsko kašnjenje
+            .answer
+              h6 Od cega se sastoji jezgra operacijskog sustava?
+              p
+                | strukture podataka jezgre
+              p
+                | jezgrenih funkcija
+            .answer
+              h6
+                | Pronađi prave RAID sustave!
+              p
+                | paritetna organizacija krupne zrnatosti sa raspodjeljenjim paritetnim pojasevima - RAID 5
+              p
+                | organizacija sa zaštitom od dvostrukog kvara - RAID 6
+              p
+                | pojasna organizacija, nema redundancije - RAID 0
+              p
+                | svaki disk ima svoju kopiju - RAID 1
+              p
+                | paritetna organizacija sitne zrnatosti, odvojeni paritetni disk - RAID 3
+            .answer
+              h6 Što je logički, a što fizički adresni prostor?
+              p
+                | logički adresni prostor je posjeljen na stanice
+              p
+                | fizički adresni prostor je spremnik podjeljen na okvire u koje, možemo smjestiti
+                | jednu stranicu
+          // Second column
+          // <div class="w3-third">
+          // </div>
+          // Thirs column
+          .w3-half
+            .answer
+              h6
+                | Mogu li stranice logičkog adresnog prostora biti smještene u okvire fizičkog
+                | adresnog prostora proizvoljnim redoslijedom?
+              p
+                | točno
+            .answer
+              h6 Prekidi
+              p
+                | sklopovski prekid
+              p
+                | programski prekid
+              p
+                | prekidi sata
+            .answer
+              h6 Prekid izazvan od U/I jedinice je?
+              p
+                | sklopovski prekid
+            .answer
+              h6 Prekid izazvan posebnom instrukcijom nazivamo?
+              p
+                | programski prekid
+            .answer
+              h6 Prekid izazvan posebnom instrukcijom nazivamo?
+              p
+                | programski prekid
+            .answer
+              h6 Prekidi izavani promašajem stranice jednaki su svim ostalim prekidima?
+              p
+                | netočno
+            .answer
+              h6
+                | U čemu se razlikuju prekidi izazvani zbog promašaja stranice kod straničenja na
+                | zahtjev od ostalih vrsta prekida?
+              p
+                | Prekid zbog adresiranja nepostojeće stranice se dogodi usred instrukcije. Nakon
+                | obrade prekida mora se ponoviti instrukcija unutar koje se dogodio prekid. Kod
+                | ostalih vrsta prekida, postojanje prekida se provjerava nakon izvođenja
+                | instrukcije, a ponovno pokretanje dretve započinje sljedećom instrukcijom
+            .answer
+              h6 Prekidi izavani promašajem stranice jednaki su svim ostalim prekidima?
+              p
+                | netočno
+            .answer
+              h6 Prekidi izavani promašajem stranice jednaki su svim ostalim prekidima?
+              p
+                | netočno
 
     // Custom scripts
     script
       include ../public/javascripts/main.js
-    
+

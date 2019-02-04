@@ -3,10 +3,10 @@
   const DEBUG = true;
 
   // Find main route to set active navbar button
-  let mainRoute = "/" + window.location.pathname.split("/")[1];
+  const mainRoute = "/" + window.location.pathname.split("/")[1];
   DEBUG && console.log("mainRoute: ", mainRoute);
 
-  let navLink = document.querySelectorAll(`nav a[href='${mainRoute}']`);
+  const navLink = document.querySelectorAll(`nav a[href='${mainRoute}']`);
   if (navLink)
     navLink.forEach(element => {
       element.classList.add("w3-win8-teal");
@@ -14,10 +14,16 @@
   DEBUG && console.log("navLink: ", navLink);
 
   const collapsable = document.querySelector("nav .collapsable");
-  document.querySelector("nav .toggler").addEventListener("click", function() {
-    DEBUG && console.log("click: ", this);
-    collapsable.classList.toggle("w3-show");
-  });
+  if (collapsable) {
+    document.querySelector("nav .toggler").addEventListener("click", function() {
+      DEBUG && console.log("click: ", this);
+      collapsable.classList.toggle("w3-show");
+    });
+    collapsable.querySelectorAll("a").forEach(() => {
+      collapsable.classList.remove("w3-show");
+    });
+  }
+  DEBUG && console.log("navLink: ", collapsable);
 
   //oninput="w3.filterHTML('#id01', 'li', this.value)"
   // let toggler = document.querySelector("nav.top .toggler");
