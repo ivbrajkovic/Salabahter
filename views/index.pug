@@ -13,7 +13,7 @@ block content
             each val in db_data
               .w3-third
                 .answer          
-                  h6= val.id + " " + val.pitanje
+                  h6= val.id + ". " + val.pitanje
                   each odgovor in val.odgovori
                     p= " " + odgovor
           //-
