@@ -69,7 +69,7 @@ router
     let pitanje = req.body.pitanje;
     let odgovori = req.body.odgovori.replace(/[^ \-;()=a-zA-Z0-9čćđšžČĆĐŠŽ]/g, "").split(";");
 
-    odgovori = odgovori.map(str => str.trim()).map(str => str.toLowerCase());
+    odgovori = odgovori.map(str => str.trim()));
     // odgovori = odgovori.map(str => str.toLowerCase());
     //for (let i = 0, l = odgovori.length; i < l; i++) odgovori[i] = odgovori[i].trim();
 
