@@ -2,6 +2,17 @@
   // Enable debuging messages
   const DEBUG = true;
 
+  // Find main route to set active navbar button
+  let mainRoute = "/" + window.location.pathname.split("/")[1];
+  DEBUG && console.log("mainRoute: ", mainRoute);
+
+  let navLink = document.querySelectorAll(`nav a[href='${mainRoute}']`);
+  if (navLink)
+    navLink.forEach(element => {
+      element.classList.add("w3-win8-teal");
+    });
+  DEBUG && console.log("navLink: ", navLink);
+
   const collapsable = document.querySelector("nav .collapsable");
   document.querySelector("nav .toggler").addEventListener("click", function() {
     DEBUG && console.log("click: ", this);

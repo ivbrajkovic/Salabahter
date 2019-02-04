@@ -7,6 +7,9 @@ const basicAuth = require("../lib").basicAuth;
 const logit = require("../lib").log;
 const db = require("../db");
 
+// Read connection settings from config file:
+const conf = require("../config.json");
+
 // Set session options
 router.use(
   session({
@@ -43,7 +46,7 @@ const auth = (req, res, next) => {
 //
 // Perform basic authentication
 const credential = basicAuth(function(user, pass, callback) {
-  callback(null, user === "admin" && pass === "admin");
+  callback(null, user === conf.auth.name && pass === conf.auth.pass);
 }, "***** Restricted Area *****");
 //
 // Set session access granted
