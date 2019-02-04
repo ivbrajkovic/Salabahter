@@ -67,7 +67,7 @@ router
   })
   .post((req, res) => {
     let pitanje = req.body.pitanje;
-    let odgovori = req.body.odgovori.replace(/[^ ;a-zA-Z0-9]/g, "").split(";");
+    let odgovori = req.body.odgovori.replace(/[^ ;a-zA-Z0-9čćđšž]/g, "").split(";");
 
     odgovori = odgovori.map(str => str.trim());
     //for (let i = 0, l = odgovori.length; i < l; i++) odgovori[i] = odgovori[i].trim();
