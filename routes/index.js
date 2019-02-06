@@ -23,7 +23,7 @@ router.use(
 
 // GET home page
 router.get("/", (req, res, next) => {
-  require("../hand").GET(res, "index", () => db.any("select * from salabahter"));
+  require("../hand").GET(res, "index", () => db.any("select * from salabahter order by id asc"));
 });
 
 // GET/POST admin page
